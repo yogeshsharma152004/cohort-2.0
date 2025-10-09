@@ -1,0 +1,338 @@
+@font-face {
+    font-family: pro;
+    src: url(./sf-pro-text_regular.woff2);
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html,body{
+    height: 100%;
+    width: 100%;
+}
+#main{
+    height: 100%;
+    width: 100%;
+    overflow-x: hidden;
+}
+#nav{
+    height: 50px;
+    background-color:#1D1D1F;
+    color: rgb(208, 208, 208);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    
+}
+#nav h4{
+    font-family: pro;
+    font-size: 15px;
+    font-weight: 100;
+}
+
+#nav h4 i{
+    font-size: 20px;
+}
+#center{
+     height: 90%;
+    background-image: url(./images/hero_iphone_17_pro__bknyzxfk2agi_mediumtall_2x.jpg);
+    background-position: center;
+    background-size: cover;
+    text-align: center;
+    padding-top: 60px;
+}
+#center h1{
+    color: #ffffff;
+    font-size: 55px;
+    font-family: pro;
+    font-weight: 800;
+}
+#center h3{
+    color: white;
+    font-family: pro;
+    font-size: 25px;
+    font-weight: 300;
+}
+.btn{
+    margin: 20px;
+    font-size: 20px;
+    padding: 12px 20px;
+    font-family: pro;
+    font-weight: 400;
+}
+.bts{
+    background-color: #0071E3;
+    color: white;
+    border-radius: 50px;
+    border: none;
+    font-weight: 400;
+}
+.bts:hover{
+    background-color: #0265c7;
+}
+.bt{
+    background-color: transparent;
+    color: #0071E3;
+    border: 1px solid #0071E3;
+    border-radius: 50px;
+}
+.bt:hover{
+    background-color: #0071E3;
+    color: white;
+    font-weight: 400;
+}
+#center-2{
+    margin-top: 15px;
+    text-align: center;
+    padding-top: 60px;
+    font-family: pro;
+    height: 90%;
+    background-image: url(./images/hero_iphone_air__0gxyavihpiqu_mediumtall_2x.jpg);
+    background-position: center;
+    background-size: cover;
+    
+}
+
+#center-2 h1{
+    font-size: 55px;
+    font-weight: 500;
+}
+#center-2 h3{
+    font-size: 28px;
+    font-weight: 100;
+}
+#center-3{
+    margin-top: 15px;
+    text-align: center;
+    padding-top: 50px;
+    font-family: pro;
+    height: 90%;
+    background-image: url(./images/hero_iphone_17__c5vvimu9a20y_mediumtall_2x.jpg);
+    background-position: center;
+    background-size: cover;
+}
+#center-3 h1{
+    font-size: 65px;
+    font-weight: 700;
+}
+#center-3 h3{
+    font-size: 30px;
+    font-weight: 200;
+}
+#lower{
+    
+   padding: 15px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+   
+}
+.watch{
+    background-image: url(./images/promo_apple_watch_series_11__b63hxviqvonm_medium_2x.jpg);
+    background-position: center;
+    background-size:cover;
+    height: 80%;
+    width: 49%;
+    text-align: center;
+    padding-top: 60px;
+    font-family: pro;
+}
+
+.watch h1 {
+    font-size: 35px;
+    font-weight: 300;
+}
+.watch h1 span{
+    font-weight: 900;
+}
+.watch h1 i{
+   font-size: 40px;
+   
+}
+.watch h3{
+    font-size: 22px;
+    font-weight: 200;
+    margin-top: 5px;
+}
+.btn1{
+    margin: 20px;
+    font-size: 16px;
+    padding: 10px 16px;
+    font-family: pro;
+    font-weight: 400;
+}
+.bts1{
+    background-color: #0071E3;
+    color: white;
+    border-radius: 50px;
+    border: none;
+    font-weight: 400;
+}
+.bts1:hover{
+    background-color: #0265c7;
+}
+.bt1{
+    background-color: transparent;
+    color: #0071E3;
+    border: 1px solid #0071E3;
+    border-radius: 50px;
+}
+.bt1:hover{
+    background-color: #0071E3;
+    color: white;
+    font-weight: 400;
+}
+.ear{
+    background-image: url(./images/promo_airpodspro_3__f6xmza7bglei_medium_2x.jpg);
+    background-position: center;
+    background-size:cover;
+    height: 80%;
+    width: 49%;
+    text-align: center;
+    padding-top: 40px;
+    font-family: pro;
+    
+}
+
+.ear h1 {
+    font-size: 40px;
+    font-weight: 700;
+}
+
+.ear h3{
+    font-size: 21px;
+    text-align: center;
+    font-weight: 200;
+    margin-top: 5px;
+    
+}
+
+.mac{
+    background-image: url(./images/promo_macbook_air__fqowrtnxewqe_medium_2x.jpg);
+    background-position: center;
+    background-size:cover;
+    height: 80%;
+    width: 49%;
+    text-align: center;
+    padding-top: 40px;
+    font-family: pro;
+    
+}
+
+.mac h1 {
+    font-size: 40px;
+    font-weight: 700;
+}
+
+.mac h3{
+    font-size: 22px;
+    font-weight: 200;
+    margin-top: 5px;    
+}
+
+.ipad{
+    background-image: url(./images/promo_ipad_air_avail__6i02t7nujr62_medium_2x.jpg);
+    background-position: center;
+    background-size:cover;
+    height: 80%;
+    width: 49%;
+    text-align: center;
+    padding-top: 40px;
+    font-family: pro;
+    
+}
+.ipad img{
+    font-size: 40px;
+}
+.ipad h3{
+    font-size: 22px;
+    font-weight: 200;
+    margin-top: 5px;    
+}
+
+.trade{
+    background-image: url(.//images/promo_iphone_tradein__bugw15ka691e_medium_2x.jpg);
+    background-position: center;
+    background-size:cover;
+    height: 80%;
+    width: 49%;
+    text-align: center;
+    padding-top: 40px;
+    font-family: pro;
+    
+}
+.trade h1{
+    font-size: 40px;
+}
+.trade h1 i{
+    font-size: 35px;
+}
+.trade h3{
+    font-size: 22px;
+    font-weight: 200;
+    margin-top: 5px;    
+}
+.trade button{
+    background-color: #0071E3;
+    border: none;
+    padding:10px 16px ;
+    font-size: 16px;
+    color: white;
+    border-radius: 50px;
+    margin-top: 8px;
+}
+.trade button:hover{
+    background-color: #0265c7;
+}
+
+.card{
+    background-image: url(./images/promo_apple_card__5cm7draujpey_medium_2x.jpg);
+    background-position: center;
+    background-size:cover;
+    height: 80%;
+    width: 49%;
+    text-align: center;
+    padding-top: 40px;
+    font-family: pro;
+    
+}
+.card h1{
+    font-size: 40px;
+}
+.card h1 i{
+    font-size: 35px;
+}
+.card h3{
+    font-size: 22px;
+    font-weight: 200;
+    margin-top: 5px;    
+}
+.card .c1{
+    background-color: #0071E3;
+    border: none;
+    padding:10px 16px ;
+    font-size: 16px;
+    color: white;
+    border-radius: 50px;
+    margin-top: 8px;
+}
+.card button:hover{
+    background-color: #0265c7;
+}
+.card .c2{
+    background-color: transparent;
+    border: 1px solid #0071E3;
+    padding: 10px 16px;
+    font-size: 16px;
+    margin-top: 8px;
+    border-radius: 50px;
+}
+.card .c2:hover{
+    background-color: #0071E3;
+    color: white;
+
+}
