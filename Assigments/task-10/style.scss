@@ -11,11 +11,34 @@ main{
     height: 100%;
     width: 100%;
     display: flex;
-    gap: 20px;
-
+    gap: 10px;
+     
     section{
+        background-size: cover;
+        background-position: center;
         height: 100%;
-        width: 30%;
-        background-color: red;
+        flex-grow: 1;
+        filter: grayscale(100%);
+    }
+    section:hover{
+        flex-grow: 2;
+        filter: grayscale(0);
+    }
+
+    section:nth-child(1){
+          background-image:url(./wp4889633-stranger-things-mobile-wallpapers.jpg);
+    }
+
+    section:nth-child(2){
+          background-image:url(./wp4889633-stranger-things-mobile-wallpapers.jpg);
+    }
+    section:nth-child(3){
+          background-image:url(./wp4889633-stranger-things-mobile-wallpapers.jpg);
+    }
+    section:nth-child(4){
+          background-image:url(./wp4889633-stranger-things-mobile-wallpapers.jpg);
+    }
+    section:nth-child(5){
+          background-image:url(./wp4889633-stranger-things-mobile-wallpapers.jpg);
     }
 }
