@@ -12,32 +12,51 @@ html, body {
 main {
   height: 100%;
   width: 100%;
-  display: flex;
-  gap: 10px;
+  background-color: black;
 }
 main section {
+  height: 100%;
+  width: 100%;
+  padding: 50px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-row: 1fr 0.3fr;
+  grid-template-areas: "aside section section section" "aside div-1 div-2 div-3";
+  gap: 50px;
+}
+main section aside {
+  grid-area: aside;
+  background-image: url(./images/565176831_17883684435390570_3485815049214758201_n.webp);
+  background-position: center;
+  background-size: cover;
+  border-radius: 25px;
+}
+main section section {
+  grid-area: section;
+  background-image: url(./images/katana.webp);
+  border-radius: 25px;
+  background-size: cover;
+  flex-grow: 1;
+  background-position: center;
+}
+main section .div-1 {
+  grid-area: div-1;
+  background-image: url(./images/fire.webp);
+  border-radius: 25px;
   background-size: cover;
   background-position: center;
-  height: 100%;
-  flex-grow: 1;
-  filter: grayscale(100%);
 }
-main section:hover {
-  flex-grow: 2;
-  filter: grayscale(0);
+main section .div-2 {
+  grid-area: div-2;
+  background-image: url(./images/dark.webp);
+  border-radius: 25px;
+  background-size: cover;
+  background-position: center;
 }
-main section:nth-child(1) {
-  background-image: url(./wp4889633-stranger-things-mobile-wallpapers.jpg);
-}
-main section:nth-child(2) {
-  background-image: url(./wp4889633-stranger-things-mobile-wallpapers.jpg);
-}
-main section:nth-child(3) {
-  background-image: url(./wp4889633-stranger-things-mobile-wallpapers.jpg);
-}
-main section:nth-child(4) {
-  background-image: url(./wp4889633-stranger-things-mobile-wallpapers.jpg);
-}
-main section:nth-child(5) {
-  background-image: url(./wp4889633-stranger-things-mobile-wallpapers.jpg);
+main section .div-3 {
+  grid-area: div-3;
+  background-image: url(./images/naruto.webp);
+  background-size: cover;
+  background-position: center;
+  border-radius: 25px;
 }/*# sourceMappingURL=style.css.map */
