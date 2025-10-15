@@ -1,9 +1,213 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+@font-face {
+  font-family: oakes;
+  src: url(./fonnts.com-oakesgrotesk-regular.otf);
 }
-html,body{
-    height: 100%;
-    width: 100%;
+@font-face {
+  font-family: tide;
+  src: url(./fonnts.com-TideSans-400LilDude.otf);
 }
+@font-face {
+  font-family: coinbase;
+  src: url(./Coinbase_Sans-Regular-web-1.32.woff2);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+}
+
+main {
+  height: 100%;
+  width: 100%;
+  background-color: #C6C6C6;
+  padding: 80px 100px;
+}
+
+.container {
+  height: 100%;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 0.4fr 0.4fr;
+  grid-template-rows: 0.2fr 1fr 1fr;
+  padding: 80px 200px;
+  background-color: white;
+  gap: 40px;
+  grid-template-areas: "header header header" "section img1 img1" "section img2 img3";
+  font-family: oakes;
+  border-radius: 100px;
+}
+
+header {
+  grid-area: header;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+header h1 {
+  font-size: 5rem;
+}
+
+header h1 i {
+  font-size: 6rem;
+  color: #8e8fd4;
+}
+
+header ul {
+  display: flex;
+  align-items: center;
+  gap: 100px;
+}
+
+header ul li {
+  list-style: none;
+  font-size: 4rem;
+}
+
+header div button {
+  font-family: oakes;
+  padding: 45px 55px;
+  border-radius: 500px;
+  font-size: 4rem;
+}
+
+header div button:nth-child(1) {
+  background-color: transparent;
+  border: none;
+}
+
+header div button:nth-child(2) {
+  margin-left: 50px;
+  background-color: black;
+  color: white;
+}
+
+header div button:nth-child(2) i {
+  font-size: 4rem;
+  background-color: #8e8fd4;
+  padding: 30px;
+  margin-left: 10px;
+  border-radius: 50%;
+  color: black;
+}
+
+section {
+  grid-area: section;
+}
+
+section div h1 {
+  font-size: 22rem;
+  font-weight: 400;
+}
+
+.top {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+}
+
+.top img {
+  height: 180px;
+  border-radius: 500px;
+}
+
+.bt {
+  display: flex;
+  align-items: center;
+}
+
+.bt button {
+  font-size: 5rem;
+  background-color: transparent;
+  padding: 40px 50px;
+  border-radius: 500px;
+  margin-left: 40px;
+}
+
+.us {
+  margin-top: 60px;
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+.us button {
+  font-family: oakes;
+  padding: 45px 55px;
+  border-radius: 500px;
+  font-size: 4rem;
+}
+
+.us button:nth-child(1) {
+  background-color: black;
+  border: none;
+  color: white;
+}
+
+.us button:nth-child(2) {
+  background-color: transparent;
+  border: none;
+  text-decoration: underline;
+}
+
+section p {
+  margin-top: 200px;
+  font-size: 4rem;
+}
+
+.low {
+  display: flex;
+  align-items: center;
+  margin-top: 40px;
+  gap: 150px;
+}
+
+.low h1 {
+  font-size: 8rem;
+}
+
+.low h1:nth-child(1) {
+  font-family: tide;
+}
+
+.low h1:nth-child(2) {
+  font-family: coinbase;
+  font-weight: 700;
+}
+
+.low h1:nth-child(3) {
+  font-weight: 700;
+}
+
+.low h1:nth-child(4) {
+  font-family: tide;
+}
+
+#img1 {
+  grid-area: img1;
+  background-image: url(./images/pexels-googledeepmind-17486099.jpg);
+  background-size: cover;
+  background-position: center;
+  border-radius: 100px;
+}
+
+#img2 {
+  grid-area: img2;
+  background-image: url(./images/images.jpg);
+  background-size: cover;
+  background-position: center;
+  border-radius: 100px;
+}
+
+#img3 {
+  grid-area: img3;
+  background-image: url(./images/diamond.jpg);
+  background-position: center;
+  background-size: cover;
+  border-radius: 100px;
+}/*# sourceMappingURL=style.css.map */
