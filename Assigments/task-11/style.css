@@ -41,6 +41,7 @@ main {
   display: flex;
   flex-direction: column;
   gap: 0.7rem;
+  align-items: center;
 }
 main header {
   display: flex;
@@ -474,41 +475,147 @@ main section.section-6 .bottom .text button i {
   border-radius: 50%;
 }
 main section.section-7 {
-  width: 100%;
   padding: 1rem;
 }
-main section.section-7 .top {
-  background-color: #CEBD63;
-  border-radius: 0.7rem;
-  padding: 1.5rem;
-  color: black;
+main section.section-7 .main {
   display: flex;
   flex-direction: column;
   gap: 1rem;
+  background-color: #cebd63;
+  border-radius: 0.7rem;
+  gap: 1rem;
+  padding: 1.5rem;
+  color: black;
 }
-main section.section-7 .top p {
+main section.section-7 .main .left {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+main section.section-7 .main .left p {
   font-family: robo;
   font-size: 1rem;
 }
-main section.section-7 .top .text {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-}
-main section.section-7 .top .text h1 {
+main section.section-7 .main .left h1 {
   font-family: chill;
   font-size: 3rem;
   text-transform: uppercase;
+  font-weight: 400;
 }
-main section.section-7 .top .text .touch button {
+main section.section-7 .main .right button {
+  width: 100%;
   background-color: black;
   color: white;
-  padding: 1.4rem;
+  padding: 1rem;
+  border-radius: 0.7rem;
+  font-size: 1.2rem;
   font-family: robo;
+  text-align: center;
+  border: none;
+  outline: none;
+}
+main section.section-8 {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 1rem;
+}
+main section.section-8 .top {
+  background-color: #2c2c2c;
+  display: flex;
+  flex-direction: column;
+  gap: 5rem;
+  border-radius: 0.7rem;
+  padding: 1.5rem;
+}
+main section.section-8 .top p {
+  font-family: chill;
+  font-size: 1.8rem;
+}
+main section.section-8 .top .icons {
+  display: flex;
+  gap: 0.5rem;
+}
+main section.section-8 .top .icons .icon {
+  font-size: 1.4rem;
+  padding: 0.8rem;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.432);
+  -webkit-backdrop-filter: blur(8px);
+          backdrop-filter: blur(8px);
+}
+main section.section-8 .mid {
+  background-color: #2c2c2c;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
   border-radius: 0.7rem;
 }
-main section.section-7 .top .text .touch button i {
-  margin-left: 0.5rem;
+main section.section-8 .mid ul {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  text-transform: uppercase;
+}
+main section.section-8 .mid ul li {
+  list-style: none;
+  font-size: 1.1rem;
+  font-family: robo;
+  opacity: 0.7;
+  font-weight: 300;
+}
+main section.section-8 .mid ul li:nth-child(1) {
+  font-family: chill;
+  font-size: 1.8rem;
+  opacity: 10;
+}
+main section.section-8 .mid ul:nth-child(1) button {
+  background-color: #cebd63;
+  width: -moz-fit-content;
+  width: fit-content;
+  border: none;
+  outline: none;
+  padding: 1rem 2rem;
+  font-size: 1.1rem;
+  border-radius: 0.7rem;
+}
+main section.section-8 .lower {
+  padding: 1.5rem;
+  background-color: #2c2c2c;
+  border-radius: 0.7rem;
+  text-align: center;
+  text-transform: uppercase;
+  font-family: robo;
+}
+main section.section-8 .lower p {
+  font-size: 1rem;
+  opacity: 0.7;
+}
+main section.section-8 .lower p span {
+  font-weight: 700;
+  text-decoration: underline;
+  opacity: 10;
+}
+main section.section-8 .lower button {
+  width: -moz-fit-content;
+  width: fit-content;
+  font-family: robo;
+  color: white;
+  padding: 1rem 0rem;
+  font-size: 1.2rem;
+  border-radius: 0.7rem;
+  border: none;
+  outline: none;
+  text-transform: uppercase;
+  background-color: transparent;
+}
+main section.section-8 .lower button i {
+  padding: 0.4rem;
+  margin-right: 1.5rem;
+  border: 1px solid white;
+  border-radius: 50%;
 }
 
 @media (min-width: 900px) {
@@ -644,14 +751,52 @@ main section.section-7 .top .text .touch button i {
   main section.section-7 {
     padding: 1rem 4rem;
   }
-  main section.section-7 .top .text {
-    flex-direction: row;
+  main section.section-7 .main {
+    display: grid;
+    grid-template-columns: 1fr 0.3fr;
+    grid-template-areas: "left right";
   }
-  main section.section-7 .top .text h1 {
-    font-size: 6.5rem;
+  main section.section-7 .main .left {
+    grid-area: left;
   }
-  main section.section-7 .top .text .touch {
+  main section.section-7 .main .left h1 {
+    font-size: 5.5rem;
+  }
+  main section.section-7 .main .right {
+    grid-area: right;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+  }
+  main section.section-7 .main .right button {
     width: -moz-fit-content;
     width: fit-content;
+  }
+  main section.section-8 {
+    padding: 1rem 4rem;
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: 0.4fr 1fr;
+    grid-template-rows: 1fr 0.3fr;
+    grid-template-areas: "top mid" "top lower";
+  }
+  main section.section-8 .top {
+    grid-area: top;
+    justify-content: space-between;
+  }
+  main section.section-8 .mid {
+    grid-area: mid;
+    flex-direction: row;
+    gap: 9.5rem;
+  }
+  main section.section-8 .mid ul {
+    gap: 2rem;
+  }
+  main section.section-8 .lower {
+    grid-area: lower;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
   }
 }/*# sourceMappingURL=style.css.map */
