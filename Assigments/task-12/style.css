@@ -49,7 +49,7 @@ main header .container {
   align-items: center;
 }
 main header img {
-  width: 25%;
+  width: 30%;
 }
 main header i {
   font-size: 1.5rem;
@@ -326,48 +326,128 @@ main section.section-7 {
 }
 main section.section-7 .container {
   display: flex;
+  position: relative;
+  width: 100%;
+  border-radius: 2rem;
+  background-color: #042449;
+  overflow: hidden;
+  padding: 6rem 2rem;
+}
+main section.section-7 .container .content {
+  display: flex;
   flex-direction: column;
   gap: 2.5rem;
-  background: linear-gradient(135deg, #001f48 60%, #0057d8 60%);
-  border-radius: 2rem;
-  padding: 6rem 2rem;
   color: white;
+  z-index: 99;
 }
-main section.section-7 .container .text {
+main section.section-7 .container .content .text {
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
 }
-main section.section-7 .container .text h3 {
+main section.section-7 .container .content .text h3 {
   font-size: 3rem;
   font-family: saans;
 }
-main section.section-7 .container .text p {
+main section.section-7 .container .content .text p {
   font-size: 1.3rem;
   font-family: roboto;
 }
-main section.section-7 .container .buttons {
+main section.section-7 .container .content .buttons {
   display: flex;
   flex-direction: column;
   gap: 1rem;
 }
-main section.section-7 .container .buttons button {
+main section.section-7 .container .content .buttons button {
   width: -moz-fit-content;
   width: fit-content;
   padding: 1rem 2rem;
   font-size: 1.2rem;
   font-weight: 400;
 }
-main section.section-7 .container .buttons button:nth-child(1) {
+main section.section-7 .container .content .buttons button:nth-child(1) {
   color: #0468d7;
   background-color: white;
   border-radius: 5rem;
   border: none;
 }
-main section.section-7 .container .buttons button:nth-child(2) {
+main section.section-7 .container .content .buttons button:nth-child(2) {
   background-color: transparent;
   color: white;
   border: none;
+}
+main section.section-7 .container img {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+}
+main footer {
+  width: 100%;
+  background-color: #f8f9fa;
+  padding: 2.5rem 2rem;
+}
+main footer .container {
+  display: flex;
+  flex-direction: column;
+  gap: 7rem;
+}
+main footer .container .top {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+main footer .container .top div img {
+  width: 30%;
+}
+main footer .container .top .uls {
+  display: flex;
+  flex-direction: column;
+  gap: 5rem;
+}
+main footer .container .top .uls ul {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  font-family: saans;
+}
+main footer .container .top .uls ul li:first-child {
+  font-size: 1.1rem;
+  font-weight: 800;
+  opacity: 10;
+}
+main footer .container .top .uls ul li {
+  list-style: none;
+  opacity: 0.9;
+}
+main footer .container .bottom {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+main footer .container .bottom .icon {
+  display: flex;
+  padding: 2rem 0.5rem;
+  gap: 1.2rem;
+  border-bottom: 2px solid #d2cacd;
+}
+main footer .container .bottom .icon i {
+  font-size: 1.1rem;
+}
+main footer .container .bottom .copy {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  text-align: center;
+  font-family: roboto;
+  font-size: 0.8rem;
+}
+main footer .container .bottom .copy .privacy {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
 }
 
 @media (min-width: 900px) {
@@ -469,6 +549,46 @@ main section.section-7 .container .buttons button:nth-child(2) {
   main section.section-6 .container .right p {
     width: 70%;
   }
+  main section.section-7 {
+    padding: 5rem 8rem;
+  }
+  main section.section-7 .container {
+    padding: 2.5rem 5rem;
+  }
+  main section.section-7 .container .content .buttons {
+    flex-direction: row;
+  }
+  main section.section-7 .container img {
+    width: 30%;
+  }
+  main footer {
+    padding: 0 2.5rem;
+  }
+  main footer .container {
+    padding: 4rem 0;
+  }
+  main footer .container .top {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  main footer .container .top div img {
+    width: 80%;
+  }
+  main footer .container .top .uls {
+    flex-direction: row;
+    gap: 10rem;
+  }
+  main footer .container .bottom .copy {
+    flex-direction: row;
+    justify-content: space-between;
+    opacity: 0.7;
+    align-items: start;
+    font-size: 1rem;
+  }
+  main footer .container .bottom .copy p {
+    width: 80%;
+    text-align: start;
+  }
 }
 @media (min-width: 2500px) {
   header .container {
@@ -480,5 +600,8 @@ main section.section-7 .container .buttons button:nth-child(2) {
   .container {
     max-width: 1600px;
     margin: auto;
+  }
+  footer .container {
+    max-width: none;
   }
 }/*# sourceMappingURL=style.css.map */
