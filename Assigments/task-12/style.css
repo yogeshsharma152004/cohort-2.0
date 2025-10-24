@@ -338,7 +338,7 @@ main section.section-7 .container .content {
   flex-direction: column;
   gap: 2.5rem;
   color: white;
-  z-index: 99;
+  z-index: 9;
 }
 main section.section-7 .container .content .text {
   display: flex;

@@ -363,7 +363,7 @@ main {
       .content {
         @include flex-column(2.5rem);
         color: white;
-        z-index: 99;
+        z-index: 9;
 
         .text {
           @include flex-column(1.5rem);
