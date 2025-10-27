@@ -1,0 +1,226 @@
+@font-face {
+  font-family: ttbold;
+  src: url(./fonts/656b86fa3fe3596cc68938b1_TTCommonsProBold.woff2);
+}
+@font-face {
+  font-family: demibold;
+  src: url(./fonts/656b86ff823e1e81ea66c6b5_TTCommonsProDemiBold.woff2);
+}
+@font-face {
+  font-family: extrabold;
+  src: url(./fonts/656b8703110c47fed1502536_TTCommonsProExtraBold.woff2);
+}
+@font-face {
+  font-family: ttregular;
+  src: url(./fonts/656b870b0129678b31d2ba06_TTCommonsProRegular.woff2);
+}
+@font-face {
+  font-family: oswald;
+  src: url(./fonts/TK3iWkUHHAIjg752GT8G.woff2);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+@mixin flex-cloumn($gap: 0rem) {
+  display: flex;
+  flex-direction: column;
+  gap: $gap;
+}
+main {
+  height: 100%;
+  width: 100%;
+
+  section.section-1 {
+    @include flex-cloumn(1.5rem);
+    justify-content: center;
+    width: 100%;
+    padding: 5rem 1.5rem;
+
+    .master {
+        
+      @include flex-cloumn(1.5rem);
+      h1 {
+        font-family: extrabold;
+        font-size: 4.3rem;
+        text-align: center;
+        line-height: 1;
+
+        .emoji {
+          font-size: 3.3rem;
+        }
+      }
+
+      p {
+        font-family: ttregular;
+        font-size: 1.4rem;
+        font-weight: 400;
+        text-align: center;
+      }
+
+      .buttons {
+        @include flex-cloumn(1rem);
+
+        button {
+          font-size: 1.1rem;
+          background-color: transparent;
+          padding: 1.2rem 0;
+          font-family: demibold;
+          // border: none;
+          border-radius: 0.3rem;
+
+          i {
+            font-size: 1.5rem;
+            margin-left: 0.5rem;
+          }
+
+          &:hover {
+            transform: translateY(-5px); // lift the button slightly
+            box-shadow: 0 8px 10px rgba(0, 0, 0, 0.35); // shadow only below
+          }
+        }
+        button:first-child {
+          border: 1px solid rgba(0, 0, 0, 0.612);
+        }
+        button:last-child {
+          background-color: #a034f6;
+          color: white;
+          border: 1px solid #a034f6;
+
+          &:hover {
+            background-color: #d03aff;
+          }
+        }
+      }
+
+    //   .video {
+    //     position: relative;
+    //     overflow: hidden;
+        
+    //     iframe {
+    //       width: 100%;
+    //       height: 100%;
+    //       border-radius: 1.3rem;
+          
+    //     }
+
+    //     button {
+    //       font-size: 3rem;
+    //       color: rgb(174, 169, 169);
+    //       border: none;
+    //       background-color: rgba(0, 0, 0, 0.553);
+    //       padding: 1rem;
+    //       border-radius: 50%;
+    //       position: absolute;
+    //       top: 50%;
+    //       left: 50%;
+    //       transform: translate(-50%, -50%);
+    //     }
+    //   }
+
+    .video {
+  position: relative;
+  width: 100%;
+  /* this keeps the video 16:9 responsive */
+//   padding-bottom: 56.25%;
+aspect-ratio: 16/9;
+  overflow: hidden;
+  border-radius: 1.3rem;
+  background-color: #000;
+
+  iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+    border-radius: 1.3rem;
+  }
+
+  /* Play button stays centered */
+  button {
+    font-size: 3rem;
+    color: rgb(174, 169, 169);
+    border: none;
+    background-color: rgba(0, 0, 0, 0.553);
+    padding: 1rem;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+  }
+}
+
+    }
+  }
+}
+
+@media (min-width: 900px) {
+  main {
+    section.section-1 {
+       
+      .master {
+        height: auto;
+        align-items: center;
+        gap: 2rem;
+        h1 {
+          font-size: 6.5rem;
+          line-height: 0.9;
+          .emoji {
+            font-size: 5rem;
+          }
+        }
+
+        .buttons {
+          flex-direction: row;
+          width: fit-content;
+
+          button {
+            padding: 1.1rem 2.5rem;
+          }
+
+          button:first-child {
+          border: 2px solid rgb(0, 0, 0);
+        }
+        }
+
+        // .video{
+        //       width: 60%;
+              
+        //     iframe{
+        //         height: 100%;
+               
+        //     }
+
+            
+        // }
+        .video {
+          width: 60%;
+          max-width: 800px;
+          max-height: 450px; /* limits excessive height */
+          margin: 0 auto; /* centers horizontally */
+          padding-bottom: 0; /* disable 16:9 padding trick */
+          aspect-ratio: 16 / 9; /* modern, cleaner way */
+          border-radius: 1.3rem;
+          overflow: hidden;
+
+          iframe {
+            width: 100%;
+            height: 100%;
+          }
+        }
+
+        
+      }
+    }
+  }
+}

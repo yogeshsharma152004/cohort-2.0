@@ -701,13 +701,16 @@ section.section-8{
       }
     }
     section.section-1{
+      
       flex-direction: row;
       padding: 1rem 4rem ;
 
       .top,
       .bottom {
         width: 50%;
+       
       }
+      
 
       .bottom {
         justify-content: space-between;
@@ -733,6 +736,7 @@ section.section-8{
       flex-direction: row;
       justify-content: space-around;
       padding: 1rem 7rem ;
+      
     
 
        .top, .bottom{
@@ -762,6 +766,7 @@ section.section-8{
         width: 50%;
       }
 
+      
       .bottom {
         justify-content: space-between;
         padding: 3rem;
@@ -796,6 +801,7 @@ section.section-8{
       .bottom {
         width: 50%;
       }
+      
 
       .bottom {
         justify-content: space-between;
