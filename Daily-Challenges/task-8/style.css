@@ -40,12 +40,12 @@ main section.section-1 {
   gap: 1.5rem;
   justify-content: center;
   width: 100%;
-  padding: 5rem 1.5rem;
 }
 main section.section-1 .master {
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
+  padding: 5rem 1.5rem;
 }
 main section.section-1 .master h1 {
   font-family: extrabold;
@@ -81,6 +81,7 @@ main section.section-1 .master .buttons button i {
 main section.section-1 .master .buttons button:hover {
   transform: translateY(-5px);
   box-shadow: 0 8px 10px rgba(0, 0, 0, 0.35);
+  transition: all 0.5s ease;
 }
 main section.section-1 .master .buttons button:first-child {
   border: 1px solid rgba(0, 0, 0, 0.612);
@@ -96,12 +97,10 @@ main section.section-1 .master .buttons button:last-child:hover {
 main section.section-1 .master .video {
   position: relative;
   width: 100%;
-  /* this keeps the video 16:9 responsive */
   aspect-ratio: 16/9;
   overflow: hidden;
   border-radius: 1.3rem;
   background-color: #000;
-  /* Play button stays centered */
 }
 main section.section-1 .master .video iframe {
   position: absolute;
@@ -125,8 +124,82 @@ main section.section-1 .master .video button {
   transform: translate(-50%, -50%);
   cursor: pointer;
 }
+main section.section-2 .container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 5rem 1.5rem;
+}
+main section.section-2 .container p {
+  font-size: 2.1rem;
+  font-family: ttbold;
+}
+main section.section-2 .container p #pink {
+  color: #ff6577;
+}
+main section.section-2 .container p #orange {
+  color: #fda801;
+}
+main section.section-2 .container p + #green {
+  color: #15bab0;
+}
+main section.section-2 .container .cards {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  justify-content: center;
+  gap: 2rem;
+  width: 100%;
+}
+main section.section-2 .container .cards .card {
+  width: 100%;
+  max-width: 450px;
+  aspect-ratio: 1/1.6;
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  border-radius: 1rem;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+main section.section-2 .container .cards .card .text {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+main section.section-2 .container .cards .card .text .svg {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+main section.section-2 .container .cards .card .text .svg svg {
+  width: 10%;
+}
+main section.section-2 .container .cards .card .text .svg h1 {
+  font-family: ttbold;
+  font-size: 1.5rem;
+}
+main section.section-2 .container .cards .card .text p {
+  font-size: 1.2rem;
+  font-family: ttregular;
+}
+main section.section-2 .container .cards .card:nth-child(1) {
+  background-image: url(./images/pink-Woman.webp);
+  background-color: #f98bab;
+}
+main section.section-2 .container .cards .card:nth-child(2) {
+  background-image: url(./images/yellowgirl\ --lummi.webp);
+}
+main section.section-2 .container .cards .card:nth-child(3) {
+  background-image: url(./images/dude_Background.webp);
+}
+main section.section-2 .container .cards .card:nth-child(3) p {
+  font-size: 1.1rem;
+}
 
-@media (min-width: 900px) {
+@media (min-width: 700px) {
   main section.section-1 .master {
     height: auto;
     align-items: center;
@@ -153,10 +226,10 @@ main section.section-1 .master .video button {
   main section.section-1 .master .video {
     width: 60%;
     max-width: 800px;
-    max-height: 450px; /* limits excessive height */
-    margin: 0 auto; /* centers horizontally */
-    padding-bottom: 0; /* disable 16:9 padding trick */
-    aspect-ratio: 16/9; /* modern, cleaner way */
+    max-height: 450px;
+    margin: 0 auto;
+    padding-bottom: 0;
+    aspect-ratio: 16/9;
     border-radius: 1.3rem;
     overflow: hidden;
   }

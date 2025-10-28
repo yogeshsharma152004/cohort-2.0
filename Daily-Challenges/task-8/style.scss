@@ -33,6 +33,7 @@ body {
   flex-direction: column;
   gap: $gap;
 }
+
 main {
   height: 100%;
   width: 100%;
@@ -41,11 +42,10 @@ main {
     @include flex-cloumn(1.5rem);
     justify-content: center;
     width: 100%;
-    padding: 5rem 1.5rem;
 
     .master {
-        
       @include flex-cloumn(1.5rem);
+      padding: 5rem 1.5rem;
       h1 {
         font-family: extrabold;
         font-size: 4.3rem;
@@ -81,8 +81,9 @@ main {
           }
 
           &:hover {
-            transform: translateY(-5px); // lift the button slightly
-            box-shadow: 0 8px 10px rgba(0, 0, 0, 0.35); // shadow only below
+            transform: translateY(-5px);
+            box-shadow: 0 8px 10px rgba(0, 0, 0, 0.35);
+            transition: all 0.5s ease;
           }
         }
         button:first-child {
@@ -99,75 +100,133 @@ main {
         }
       }
 
-    //   .video {
-    //     position: relative;
-    //     overflow: hidden;
-        
-    //     iframe {
-    //       width: 100%;
-    //       height: 100%;
-    //       border-radius: 1.3rem;
-          
-    //     }
+      .video {
+        position: relative;
+        width: 100%;
 
-    //     button {
-    //       font-size: 3rem;
-    //       color: rgb(174, 169, 169);
-    //       border: none;
-    //       background-color: rgba(0, 0, 0, 0.553);
-    //       padding: 1rem;
-    //       border-radius: 50%;
-    //       position: absolute;
-    //       top: 50%;
-    //       left: 50%;
-    //       transform: translate(-50%, -50%);
-    //     }
-    //   }
+        aspect-ratio: 16/9;
+        overflow: hidden;
+        border-radius: 1.3rem;
+        background-color: #000;
 
-    .video {
-  position: relative;
-  width: 100%;
-  /* this keeps the video 16:9 responsive */
-//   padding-bottom: 56.25%;
-aspect-ratio: 16/9;
-  overflow: hidden;
-  border-radius: 1.3rem;
-  background-color: #000;
+        iframe {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          border: none;
+          border-radius: 1.3rem;
+        }
 
-  iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    border: none;
-    border-radius: 1.3rem;
+        button {
+          font-size: 3rem;
+          color: rgb(174, 169, 169);
+          border: none;
+          background-color: rgba(0, 0, 0, 0.553);
+          padding: 1rem;
+          border-radius: 50%;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          cursor: pointer;
+        }
+      }
+    }
   }
 
-  /* Play button stays centered */
-  button {
-    font-size: 3rem;
-    color: rgb(174, 169, 169);
-    border: none;
-    background-color: rgba(0, 0, 0, 0.553);
-    padding: 1rem;
-    border-radius: 50%;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    cursor: pointer;
-  }
-}
+  
+  section.section-2 {
+   
+    .container {
+      @include flex-cloumn(2rem);
+      padding: 5rem 1.5rem;
+      
+      
+      
+      p {
+        font-size: 2.1rem;
+        font-family: ttbold;
 
+        #pink {
+          color: #ff6577;
+        }
+        #orange {
+          color: #fda801;
+        }+
+        #green {
+          color: #15bab0;
+        }
+      }
+
+      .cards {
+        @include flex-cloumn(1.5rem);
+        justify-content: center;
+        gap: 2rem;
+        width: 100%;
+
+        .card {
+          width: 100%;
+          max-width: 450px;
+          aspect-ratio: 1/1.6;
+          position: relative;
+          background-size: cover;
+          background-position: center;
+          border-radius: 1rem;
+          padding: 1.5rem;
+          @include flex-cloumn(1.5rem);
+
+          .text {
+            @include flex-cloumn(1rem);
+
+            .svg {
+              display: flex;
+              align-items: center;
+              gap: 1rem;
+
+              svg {
+                width: 10%;
+              }
+
+              h1 {
+                font-family: ttbold;
+                font-size: 1.5rem;
+              }
+            }
+
+            p {
+              font-size: 1.2rem;
+              font-family: ttregular;
+            }
+          }
+        }
+
+        .card:nth-child(1) {
+          background-image: url(./images/pink-Woman.webp);
+          background-color: #f98bab;
+        }
+
+        .card:nth-child(2) {
+          background-image: url(./images/yellowgirl\ --lummi.webp);
+        }
+
+        .card:nth-child(3) {
+          background-image: url(./images/dude_Background.webp);
+
+          p {
+            font-size: 1.1rem;
+          }
+        }
+      }
     }
   }
 }
 
-@media (min-width: 900px) {
+@media (min-width: 700px) {
   main {
+     
     section.section-1 {
-       
       .master {
         height: auto;
         align-items: center;
@@ -189,27 +248,17 @@ aspect-ratio: 16/9;
           }
 
           button:first-child {
-          border: 2px solid rgb(0, 0, 0);
-        }
+            border: 2px solid rgb(0, 0, 0);
+          }
         }
 
-        // .video{
-        //       width: 60%;
-              
-        //     iframe{
-        //         height: 100%;
-               
-        //     }
-
-            
-        // }
         .video {
           width: 60%;
           max-width: 800px;
-          max-height: 450px; /* limits excessive height */
-          margin: 0 auto; /* centers horizontally */
-          padding-bottom: 0; /* disable 16:9 padding trick */
-          aspect-ratio: 16 / 9; /* modern, cleaner way */
+          max-height: 450px;
+          margin: 0 auto;
+          padding-bottom: 0;
+          aspect-ratio: 16 / 9;
           border-radius: 1.3rem;
           overflow: hidden;
 
@@ -218,9 +267,9 @@ aspect-ratio: 16/9;
             height: 100%;
           }
         }
-
-        
       }
     }
+
+    
   }
 }
