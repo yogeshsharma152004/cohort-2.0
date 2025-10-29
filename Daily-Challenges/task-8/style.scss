@@ -23,6 +23,9 @@
   padding: 0;
   box-sizing: border-box;
 }
+html{
+  font-size: clamp(15px, 1vw, 20px);
+}
 html,
 body {
   height: 100%;
@@ -270,6 +273,13 @@ main {
       }
     }
 
-    
+    section.section-2{
+      .container{
+           .cards{
+          flex-direction: row;
+        }
+      }
+        
+    }
   }
 }
