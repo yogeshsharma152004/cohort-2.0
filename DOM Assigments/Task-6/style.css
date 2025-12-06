@@ -7,13 +7,73 @@ html,body{
     height: 100%;
     width: 100%;
 }
-body{
-    display: flex;
+main{
+    height: 100%;
+    width: 100%;
+     display: flex;
     align-items: center;
     justify-content: center;
+    background-color: black;
 }
-#card{
-   background-color: red;
-   height: 500px;
-   width: 300px;
+.card{
+   background-color:white;
+   height: 300px;
+   width: 500px;
+   padding: 30px;
+   border-radius: 20px;
+}
+.card p{
+  text-align: center;
+  margin-bottom: 40px;
+  font-size: 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  border: none;
+  font-weight: 500;
+}
+.card p span{
+  font-weight: 600;
+  color: royalblue;
+}
+.outer{
+    background-color: gray;
+    height: 20px;
+    border-radius: 20px;
+    width: 100%;
+}
+.inner{
+    background-color: green;
+    width: 0%;
+    height: 100%;
+    border-radius: 20px;
+}
+.bottom{
+  display: flex;
+  align-items: center;
+ justify-content: space-between;
+  margin-top: 20px;
+}
+
+.bottom h2{
+  font-size: 60px;
+  color: black;
+  font-family: monospace;
+}
+
+.bottom button{
+  padding: 12px 25px;
+  background-color: green;
+  color: white;
+  border-radius: 5px;
+  font-size: 18px;
+  font-weight: 600;
+  border: 0;
+  cursor: pointer;
+  border-radius: 5px;
+  position: relative;
+  z-index: 9;
+}
+
+.para{
+    margin-top: 20px;
+    margin-bottom: 0px;
 }
