@@ -1,68 +1,73 @@
-let cricketrs = [
+let country = [
   {
-    photo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQvIdQDsTM7sD7eRksMP2f98TEsqEEDUXOXhA&s",
-    fullName: "Virat Kohli",
-    profession: "Indian Cricketer",
-    description: "Top-order batsman, known for consistency and chasing skills across formats. "
+    photo:
+      "https://i.pinimg.com/736x/f6/4a/06/f64a06a319573ceb8c195887c9e38bb1.jpg",
+    countryName: "India",
+    details: "1,321 Hotels . 73 packages",
   },
   {
-    photo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRo8WIjik04FQ3WK4OcDIah2rLaz-l_nxpSrg&s",
-    fullName: "Joe Root",
-    profession: "English Cricketer",
-    description: "Classic batsman, very consistent in Test and ODI cricket. "
+    photo:
+      "https://i.pinimg.com/1200x/46/7d/ec/467dec9752c9efdc0652b5464295a7c1.jpg",
+    countryName: "Turkey",
+    details: "1,991 Hotels . 42 packages",
   },
   {
-    photo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQJIH0i1Lal9WJ3Rt1L4idgBwgxn9mCT9MtGg&s",
-    fullName: "Steve Smith",
-    profession: "Australian Cricketer",
-    description: "Unorthodox batsman, very effective under pressure and in challenging conditions. "
+    photo:
+      "https://i.pinimg.com/1200x/89/a6/67/89a667a1665a0d85b726bcfb67346eaa.jpg",
+    countryName: "Indonesia",
+    details: "1,335 Hotels . 28 packages",
   },
   {
-    photo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQxLGu22kXFqU_1rS09TsNxxXibKkz2psuxnA&s",
-    fullName: "Kane Williamson",
-    profession: "New Zealand Cricketer",
-    description: "Calm and technically sound batsman, anchors the innings. "
+    photo:
+      "https://i.pinimg.com/1200x/c5/8b/8c/c58b8c199ea3479c226546d9be11dc17.jpg",
+    countryName: "Dubai",
+    details: "1,774 Hotels . 38 packages",
   },
   {
-    photo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSR3-0Cv-ISo258uvyU7EPbME8BfpDeZEZahQ&s",
-    fullName: "AB de Villiers",
-    profession: "South African Cricketer",
-    description: "Dynamic middle-order batsman, known for aggressive strokeplay and versatility in limited-overs cricket. "
+    photo:
+      "https://i.pinimg.com/1200x/8b/9a/36/8b9a367cbf6e304478013b1459bf9795.jpg",
+    countryName: "Vietnam",
+    details: "1,448 Hotels . 30 packages",
   },
   {
-    photo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTiEI6NAf-j7NaOlHQSEl6YHHwtfzJIWRH27Q&s",
-    fullName: "Rohit Sharma",
-    profession: "Indian Cricketer",
-    description: "Explosive opening batsman, known for big hundreds especially in white-ball cricket. "
+    photo:
+      "https://i.pinimg.com/736x/72/5e/91/725e9191e2a99e2bd728305c49601ea4.jpg",
+    countryName: "China",
+    details: "1,114 Hotels . 52 packages",
   },
   {
-    photo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQhYd_d5zsyCj8efkwy7038vfgKwRoltXANVQ&s",
-    fullName: "Jos Buttler",
-    profession: "English Cricketer",
-    description: "Aggressive wicket-keeper batsman, dangerous in limited-overs with aggressive batting. "
+    photo:
+      "https://i.pinimg.com/736x/5d/6c/68/5d6c6825857afb2ba97f4ba518a068a7.jpg",
+    countryName: "South-Korea",
+    details: "1,8744 Hotels . 63 packages",
   },
+
   {
-    photo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTDYMi8zBXP0clQJ82pfQDUtCitZmutiZqS2g&s",  
-    fullName: "Jasprit Bumrah",
-    profession: "Indian Cricketer (Pacer)",
-    description: "Premier fast-bowler, among the best active pace bowlers in world cricket. "
-  }
+    photo:
+      "https://i.pinimg.com/1200x/55/aa/23/55aa23a2a15ff7ac9ce51bd90fc6cb5b.jpg ",
+    countryName: "New-Zealand",
+    details: "1,654 Hotels . 38 packages",
+  },
 ];
 
+let main = document.querySelector("main");
+let card = document.getElementsByClassName("card");
 
-
-let main = document.querySelector('main');
-let card = document.getElementsByClassName('card');
-
-let sum = '';
-cricketrs.forEach(function(val){
-   sum = sum + `<div class="card">
+let sum = "";
+country.forEach(function (val) {
+  sum = sum + `   <div class="card">
         <img id="img" src="${val.photo}" alt="">
 
-        <h3>${val.fullName}</h3>
-        <h4>${val.profession}</h4>
-        <p>${val.description}</p>
-    </div>`
-})
+        <div class="bottom">
+        <h3> ${val.countryName} </h3>
+
+       <h4>${val.details}</h4>
+       
+         <p>Explore Now  <i class="ri-arrow-right-s-line"></i></p>
+
+        </div>
+        
+     </div>`;
+});
 
 main.innerHTML = sum;
