@@ -53,6 +53,12 @@ let country = [
 let main = document.querySelector("main");
 let card = document.getElementsByClassName("card");
 
+
+
+
+
+ 
+
 let sum = "";
 country.forEach(function (val) {
   sum = sum + `   <div class="card">
@@ -63,11 +69,22 @@ country.forEach(function (val) {
 
        <h4>${val.details}</h4>
        
-         <p>Explore Now  <i class="ri-arrow-right-s-line"></i></p>
+         <button class="btn">Explore Now  <i class="ri-arrow-right-s-line"></i></button>
 
         </div>
         
      </div>`;
+
+   
+
+
 });
 
+
+ 
+
+
 main.innerHTML = sum;
+
+
+

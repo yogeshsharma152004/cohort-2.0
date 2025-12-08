@@ -14,7 +14,6 @@ main {
   padding: 20px;
   display: flex;
   gap: 40px;
-  
   flex-wrap: wrap;
   justify-content: center;
 }
@@ -61,25 +60,31 @@ main {
 
 }
 
-.card .bottom p{
+.card .bottom button{
 
   
   background-color: rgba(12, 12, 12, 0.785);
-  padding: 8px  10px;
-  border-radius: 13px;
+  padding: 6px  10px;
+  border-radius: 10px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  font-size: 16px;
+  font-size: 15px;
   font-weight: 400;
   margin-top: 6px;
-
+  border: none;
+  color: white;
+  
 }
 
-.card .bottom p i{
+.card .bottom button i{
   font-size: 20px;
   font-weight: 900;
   
+}
+
+.card .bottom button:active {
+  scale: 0.9;
 }
 
 
