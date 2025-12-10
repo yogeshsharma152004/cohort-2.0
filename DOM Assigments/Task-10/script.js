@@ -1,76 +1,43 @@
-const keyMap = {
-    // White Keys (21)
-    "KeyA": 28,
-    "KeyS": 29,
-    "KeyD": 30,
-    "KeyF": 31,
-    "KeyG": 32,
-    "KeyH": 33,
-    "KeyJ": 34,
-    "KeyK": 35,
-    "KeyL": 36,
-    "Semicolon": 37,
-    "Quote": 38,
-    "KeyZ": 39,
-    "KeyX": 40,
-    "KeyC": 41,
-    "KeyV": 42,
-    "KeyB": 43,
-    "KeyN": 44,
-    "KeyM": 45,
-    "Comma": 46,
-    "Period": 47,
-    "Slash": 48,
+let keys = document.querySelectorAll('.key') //seclet all tha white and black key using class key
 
-    // Black Keys (15)
-    "KeyW": 49,
-    "KeyE": 50,
-    "KeyT": 51,
-    "KeyY": 52,
-    "KeyU": 53,
-    "KeyI": 54,
-    "KeyO": 55,
-    "KeyP": 56,
-    "BracketLeft": 57,
-    "BracketRight": 58,
-    "KeyR": 59,
-    "Digit5": 60,
-    "Digit6": 61,
-    "Digit7": 62,
-    "Digit8": 63
-};
+ 
+
+let audio = [...keys].map((key , index) => {
+       return new Audio(`./audio/${28+index}.mp3`) //path of audio file and index of it 
+}) //nodelist convert to array and uspe map lagake return kiya to har aek ki ke liye onject banayega
 
 
-let keys = document.querySelectorAll(".key span");
+function playSound(index){
+    audio[index].currentTime = 0; //audio ko restart karta hai
+    audio[index].play(); // jo index aai vo sound play karne ke liye 
 
-function playSound(audioNumber) {
-    let sound = new Audio(`./audio/${audioNumber}.mp3`);
-    sound.play();
+    keys[index].classList.add('active'); // scale wala animation perform karne ke liye 
+
+    setTimeout(()=>{
+             keys[index].classList.remove('active');
+    },200) // sacle wala animation khcuh time baad remove ho jayega 
 }
 
-function pressEffect(keyElement) {
-    keyElement.style.transform = "scale(0.9)";
-    keyElement.style.transition = "all 0.2s ease";
-    setTimeout(() => {
-        keyElement.style.transform = "scale(1)";
-    }, 200);
-}
 
-// CLICK event
-keys.forEach((key, index) => {
-    key.addEventListener("click", () => {
-        playSound(28 + index);
-        pressEffect(key);
-    });
+//har key ke upar click event lagake foreach method chala diya or event listner click laga ke playsound funcition ko return kiya jo index number aayega click pe vo sound chalega
+
+
+keys.forEach((key,index) => {
+    key.addEventListener('click' , ()=>{
+        playSound(index);
+    })
+})
+
+
+//keydown ke liye eventlistner banaya 
+
+document.addEventListener('keydown', (e) =>{
+    let keyPress = e.key.toLowerCase(); // jo bhi value e.key me aayegi vo lowwer case me convert ho jaygi
+
+    let pressedKey = [...keys].find((k) => k.dataset.key.toLowerCase() === keyPress); // hamne jo key press ki uski value html attribute se dataset se key ki value layega or usse lowwercase me convert karega agar vo kwypress ke barabar hui to vo key return karega
+
+    if(!pressedKey) return; // check karega agar key match hui to aage ka code chalega varna nahi chalega
+
+    let index = [...keys].indexOf(pressedKey);  //node list ko array me convert karke jo presskey thi uska index niakal or us hisab se audio play karne ke liye playsound function vo index return kardi to presskey ke index ke hisab se sound bajega
+    playSound(index); 
 });
-
-// KEYDOWN event
-document.addEventListener("keydown", (e) => {
-    keys.forEach((key, index) => {
-        if (key.innerText.toLowerCase() === e.key.toLowerCase()) {
-            playSound(28 + index);
-            pressEffect(key);
-        }
-    });
-});
-

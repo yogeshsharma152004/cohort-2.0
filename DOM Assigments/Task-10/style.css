@@ -50,123 +50,14 @@ section {
 }
 
 .key .white-key:active {
-    scale: 0.9;
-    transition: all ease  0.2s;
+   
     background-color: rgb(210, 200, 200);
 }
 
 
 
 
-/* main container */
-/* .piano {
-  position: relative; 
-} */
 
-/* Black keys container */
-/* .black-keys {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 60%;
-  pointer-events: none; //white key chalti rahe is liye 
-  z-index: 10;
-} */
-
-/* .black-keys .uls-1 {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-} */
-
-/* Each black key container */
-/* .uls-1 .black {
-  position: absolute;
-  list-style: none;
-  height: 100%;
-  width: calc((100% / 21) * 0.6); /* black key = 60% of white key width */
-  /* pointer-events: auto;  can click black key  */
-/* } */ 
-
-/* Black key look */
-/* .key .black-key {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: black;
-  color: white;
-  border-radius: 0 0 8px 8px;
-  border: 1px solid rgba(30,30,30,0.8);
-  box-shadow: 2px 4px 3px rgba(0,0,0,0.7);
-  font-size: 14px;
-  display: flex;
-  justify-content: center;
-  align-items: flex-end;
-  cursor: pointer;
-} */
-
-/* Press effect */
-/* .black-key:active {
-  transform: scale(.92);
-  background-color: rgb(40,40,40);
-} */
-
-/* ⭐⭐⭐ Black Key Exact Positions ⭐⭐⭐ */
-/* Border index logic: (white key number * width) - half black width */
-
-/* Key 1 → C & D border */
- /* .uls-1 .black:nth-child(1) {
-  left: calc((100% / 21) * 1 - ((100% / 21) * 0.6) / 2); */
-/* }   */
-
-/* Key 2 → D & E border */
-/* .uls-1 .black:nth-child(2) {
-  left: calc((100% / 21) * 2 - ((100% / 21) * 0.6) / 2);
-} */
-
-/* E-F mein black key nahi hoti */
-
-/* Key 3 → F & G border */
-/* .uls-1 .black:nth-child(3) {
-  left: calc((100% / 21) * 4 - ((100% / 21) * 0.6) / 2);
-} */
-
-/* Key 4 → G & A border */
-/* .uls-1 .black:nth-child(4) {
-  left: calc((100% / 21) * 5 - ((100% / 21) * 0.6) / 2);
-} */
-
-/* Key 5 → A & B border */
-/* .uls-1 .black:nth-child(5) {
-  left: calc((100% / 21) * 6 - ((100% / 21) * 0.6) / 2);
-} */
-
-/* ▬ Next octave ▬ */
-
-/* Key 6 → C & D border */
-/* .uls-1 .black:nth-child(6) {
-  left: calc((100% / 21) * 8 - ((100% / 21) * 0.6) / 2);
-} */
-
-/* Key 7 → D & E border */
-/* .uls-1 .black:nth-child(7) {
-  left: calc((100% / 21) * 9 - ((100% / 21) * 0.6) / 2);
-} */
-
-/* Key 8 → F & G border */
-/* .uls-1 .black:nth-child(8) {
-  left: calc((100% / 21) * 11 - ((100% / 21) * 0.6) / 2);
-} */
-
-/* Key 9 → G & A border */
-/* .uls-1 .black:nth-child(9) {
-  left: calc((100% / 21) * 12 - ((100% / 21) * 0.6) / 2);
-} */
 
 
 .piano{
@@ -219,9 +110,14 @@ section {
 }
 
 .black-key:active {
+  background-color: rgb(56, 54, 54);
+  
+}
+
+
+.key.active{
   scale: 0.9;
   transition: all ease 0.2s;
-  
 }
 
 .uls-1 .black:nth-child(1){
