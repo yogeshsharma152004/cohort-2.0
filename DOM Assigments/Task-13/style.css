@@ -1,0 +1,183 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+body {
+  background-color: black;
+}
+main {
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(
+    to right bottom,
+    rgb(26, 26, 26),
+    rgb(30, 30, 30),
+    black
+  );
+  padding: 20px;
+  overflow: auto;
+}
+section {
+  height: 100%;
+  width: 370px;
+  /* background-color: black; */
+  border-radius: 15px;
+  margin: auto;
+  /* overflow: hidden; */
+}
+.all-reels {
+  height: 100%;
+  width: 100%;
+  overflow: auto;
+  scroll-snap-type: y mandatory;
+  scroll-behavior: smooth;
+}
+.all-reels::-webkit-scrollbar {
+  display: none;
+}
+.reel {
+  height: 100%;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  border-radius: 15px;
+  margin-bottom: 20px;
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
+}
+.reel video {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+.reel .bottom {
+  padding: 30px 20px;
+
+  width: 100%;
+  background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.667));
+  position: absolute;
+  bottom: 0;
+}
+.bottom h3 {
+  color: white;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+}
+.bottom .user {
+  display: flex;
+  align-items: center;
+  color: white;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+.user img {
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+.user button {
+  padding: 8px 20px;
+  background-color: transparent;
+  color: white;
+  font-weight: 500;
+  border: 1px solid white;
+  border-radius: 5px;
+}
+.right {
+  padding-right: 10px;
+  color: white;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  width: 40px;
+  position: absolute;
+  right: 0;
+  bottom: 15%;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  text-align: center;
+  align-items: center;
+}
+
+.right i {
+  font-size: 25px;
+  font-weight: 100;
+}
+.right h6 {
+  font-size: 16px;
+  font-weight: 500;
+}
+.right > div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  cursor: pointer;
+}
+.love {
+  color: rgb(244, 34, 83);
+}
+
+.right > div h4 {
+  pointer-events: none;
+}
+.right > div h6 {
+  pointer-events: none;
+}
+.mute {
+  background-color: #333;
+  border-radius: 50%;
+  height: 50px;
+  width: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  position: absolute;
+  top: 10px;
+  left: 20px;
+  z-index: 10;
+  color: white;
+  
+}
+.mute i{
+    font-size: 22px;
+    pointer-events: none;
+}
+.mute:active:active{
+    scale: 0.9;
+}
+
+.pause {
+  background-color: #333;
+  border-radius: 50%;
+  height: 50px;
+  width: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  z-index: 10;
+  color: white;
+  
+}
+.pause i{
+    font-size: 22px;
+    pointer-events: none;
+}
+.pause:active:active{
+    scale: 0.9;
+}
+
